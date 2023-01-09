@@ -2,11 +2,7 @@ import java.text.NumberFormat;
 import java.util.Scanner;
 
 /*
-Principal : 100,000
-Annual Interest Rate : 3.92
-Period (Years) : 10
-
-Formular
+Mortgage Formular
 
 var a = r*(1 + r) raised to power n
 var b = (1+r) raised to power n
