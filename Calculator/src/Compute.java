@@ -21,7 +21,8 @@ public class Compute{
             }
             case "-" -> {
                 computeResult = Double.parseDouble(this.firstVariable) - Double.parseDouble(this.secondVariable);
-                return (Double.toString(computeResult));
+                String v =Double.toString(computeResult);
+                return doubleToInt(v);
             }
             case "x" -> {
                 computeResult = Double.parseDouble(this.firstVariable) * Double.parseDouble(this.secondVariable);
@@ -37,4 +38,24 @@ public class Compute{
         }
 
     }
+
+    private String doubleToInt(String data){
+        String input = data;
+        int inputLength = data.length();
+        String newString;
+        String char1 = Character.toString(input.charAt(inputLength-1));
+        String char2 = Character.toString(input.charAt(inputLength-2));
+
+
+        if(char1.equals("0") && char2.equals(".")){
+            newString = input.substring(0, input.length() - 2);
+            return newString;
+        }
+        else{
+            newString = input;
+            return newString;
+        }
+
+    }
+
 }
